@@ -12,11 +12,10 @@ body {
 main {
     overflow-y: auto;
     max-height: 100vh;
-    
 }
 
 main::-webkit-scrollbar {
-    width: 5px;
+    width: 7px;
 }
 
 main::-webkit-scrollbar-thumb {
