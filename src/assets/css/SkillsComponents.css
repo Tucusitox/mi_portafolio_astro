@@ -10,9 +10,9 @@
   background: #077b32;
 }
 .tab-content {
-  padding: 20px 10px;
   display: flex;
   justify-content: center;
+  padding: 30px 10px;
 }
 .tab-content div {
   display: none;
@@ -42,7 +42,7 @@
     margin: 10px 0px !important;
   }
   .IconsSkills{
-    padding: 30px 0px !important;
+    padding: 80px 0px !important;
   }
   .IconsSkills a{
     margin: 15px 5px !important;
