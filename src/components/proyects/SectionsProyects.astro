@@ -2,7 +2,8 @@
 const { 
         TittleProyect, DescripProyect, 
         BtnViewPlus, ViewCode, IdCarrousel, 
-        DataTargetCarrousel 
+        DataTargetCarrousel, ImgProyect1,
+        ImgProyect2,ImgProyect3 
     } = Astro.props;
 
 import "../../assets/css/StyleSections.css"
@@ -16,13 +17,13 @@ const skills = skillsData;
 
     <div class="carousel-inner border border-2 border-success rounded">
       <div class="carousel-item active">
-        <img src="/public/onePiece.jpg" class="ImgProyectsCarrousel">			
+        <img src={ ImgProyect1 } class="ImgProyectsCarrousel">			
       </div>
       <div class="carousel-item">
-        <img src="/public/5.jpg" class="ImgProyectsCarrousel">
+        <img src={ ImgProyect2 } class="ImgProyectsCarrousel">
       </div>
       <div class="carousel-item">
-        <img src="/public/kamehouse.png" class="ImgProyectsCarrousel">
+        <img src={ ImgProyect3 } class="ImgProyectsCarrousel">
       </div>
     </div>
 
@@ -89,7 +90,7 @@ const skills = skillsData;
       >
         <img
           class="iconImg"
-          src="/public/SkillsIcons/github.ico"
+          src="/SkillsIcons/github.ico"
           alt="Ver código"
         />
       </a>

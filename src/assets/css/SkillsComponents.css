@@ -41,6 +41,9 @@
     padding: 0px 0px !important;
     margin: 10px 0px !important;
   }
+  .IconsSkills{
+    padding: 30px 0px !important;
+  }
   .IconsSkills a{
     margin: 15px 5px !important;
     padding: 10px 0px !important;
@@ -50,6 +53,9 @@
   .IconsSkills img{
     width: 40px !important;
     height: 40px !important;
+  }
+  .SoftSkills{
+    margin: -30px 0px !important;
   }
 }
 
