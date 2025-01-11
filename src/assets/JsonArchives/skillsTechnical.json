@@ -2,49 +2,61 @@
     {
         "IdIcon": 1,
         "IconTitulo": "HTML",
-        "RutaImg": "/public/SkillsIcons/html5.ico",
+        "RutaImg": "/SkillsIcons/html5.ico",
         "IconWeb": "https://developer.mozilla.org/en-US/docs/Glossary/HTML5"
     },
     {
         "IdIcon": 2,
         "IconTitulo": "CSS",
-        "RutaImg": "/public/SkillsIcons/ccs3.ico",
+        "RutaImg": "/SkillsIcons/ccs3.ico",
         "IconWeb": "https://developer.mozilla.org/en-US/docs/Web/CSS"
     },
     {
         "IdIcon": 3,
         "IconTitulo": "JavaScript",
-        "RutaImg": "/public/SkillsIcons/js.ico",
+        "RutaImg": "/SkillsIcons/js.ico",
         "IconWeb": "https://developer.mozilla.org/en-US/docs/Web/JavaScript"
     },
     {
         "IdIcon": 4,
         "IconTitulo": "Bootstrap",
-        "RutaImg": "/public/SkillsIcons/boostrap.ico",
+        "RutaImg": "/SkillsIcons/boostrap.ico",
         "IconWeb": "https://getbootstrap.com"
     },
     {
         "IdIcon": 5,
         "IconTitulo": "PHP",
-        "RutaImg": "/public/SkillsIcons/php-removebg-preview.ico",
+        "RutaImg": "/SkillsIcons/php-removebg-preview.ico",
         "IconWeb": "https://www.php.net/docs.php"
     },
     {
         "IdIcon": 6,
         "IconTitulo": "MySQL",
-        "RutaImg": "/public/SkillsIcons/mysql2.ico",
+        "RutaImg": "/SkillsIcons/mysql2.ico",
         "IconWeb": "https://dev.mysql.com/doc/"
     },
     {
         "IdIcon": 7,
         "IconTitulo": "Laravel",
-        "RutaImg": "/public/SkillsIcons/laravel.ico",
+        "RutaImg": "/SkillsIcons/laravel.ico",
         "IconWeb": "https://laravel.com/docs/11.x/readme"
     },
     {
         "IdIcon": 8,
         "IconTitulo": "Livewire",
-        "RutaImg": "/public/SkillsIcons/livewire.ico",
+        "RutaImg": "/SkillsIcons/livewire.ico",
         "IconWeb": "https://livewire.laravel.com/docs/installation"
+    },
+    {
+        "IdIcon": 9,
+        "IconTitulo": "Git",
+        "RutaImg": "/SkillsIcons/git.ico",
+        "IconWeb": "https://git-scm.com/doc"
+    },
+    {
+        "IdIcon": 10,
+        "IconTitulo": "Github",
+        "RutaImg": "/SkillsIcons/github.ico",
+        "IconWeb": "https://docs.github.com/es"
     }
 ]
