@@ -1,0 +1,38 @@
+---
+const { TittleProyect, ViewProyectMp4 } = Astro.props;
+---
+<div class="modal fade" id="section-1">
+    <div class="modal-dialog modal-dialog-centered modal-fullscreen p-2">
+        <div class="modal-content bg-transparent" style="backdrop-filter: blur(3rem);">
+
+            <div class="modal-header d-flex justify-content-between border border-0">
+                <h1 class="modal-title text-success custom-shadow fs-4"><b>{ TittleProyect }</b></h1>
+                <b>
+                    <i class='bx bx-x text-danger fs-2'  
+                    data-bs-dismiss="modal"
+                    title="Ver menos"></i>
+                </b>
+            </div>
+            
+            <div class="modal-body d-flex justify-content-center">
+                <video controls muted class="rounded">
+                    <source src={ ViewProyectMp4 } type="video/mp4" />
+                </video>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+<style>
+    .custom-shadow {
+		text-shadow: 0 0 10px #077b32;
+	}
+    i{
+        cursor: pointer;
+    }
+    video {
+        display: block;
+        width: 100%;
+    }
+</style>

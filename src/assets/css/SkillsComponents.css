@@ -1,0 +1,56 @@
+.tabs button {
+  background: transparent;
+  color: #077b32;
+  border-radius: 10px;
+  border: 2px solid #077b32;
+  padding: 10px;
+}
+.tabs button:hover {
+  color: white;
+  background: #077b32;
+}
+.tab-content {
+  padding: 20px 10px;
+  display: flex;
+  justify-content: center;
+}
+.tab-content div {
+  display: none;
+}
+.IconsSkills a{
+  padding: 10px 10px;
+  margin: 10px 10px;
+}
+.tab-content h2{
+  text-shadow: 0 0 10px #077b32;
+}
+.tab-content .active {
+  display: block;
+}
+.tabs .active {
+  background: #077b32;
+  color: white;
+}
+.iconImg {
+  width: 200px;
+  height: 200px;
+}
+
+@media (max-width: 800px) {
+  .tab-content{
+    padding: 0px 0px !important;
+    margin: 10px 0px !important;
+  }
+  .IconsSkills a{
+    margin: 15px 5px !important;
+    padding: 10px 0px !important;
+    width: 60px !important;
+    height: 60px !important;
+  }
+  .IconsSkills img{
+    width: 40px !important;
+    height: 40px !important;
+  }
+}
+
+

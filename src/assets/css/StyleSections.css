@@ -1,0 +1,44 @@
+.custom-shadow {
+  text-shadow: 0 0 10px #077b32;
+}
+
+section {
+  view-timeline-name: --section;
+  view-timeline-axis: block;
+
+  animation-timeline: --section;
+  animation-name: show;
+
+  animation-range: entry 35% cover 30%;
+  animation-fill-mode: both;
+
+  animation-duration: 2s;
+}
+
+.ImgProyectsCarrousel {
+  display: block;
+  width: 100%;
+  height: 450px;
+}
+
+.iconImg {
+  width: 40px;
+  height: 40px;
+}
+
+@keyframes show {
+  from {
+    opacity: 0;
+    scale: 25%;
+  }
+  to {
+    opacity: 1;
+    scale: 100%;
+  }
+}
+
+@media (max-width: 800px) {
+  .btnVerMas {
+    text-align: center !important;
+  }
+}

@@ -1,0 +1,98 @@
+---
+const { 
+        TittleProyect, DescripProyect, 
+        BtnViewPlus, ViewCode, IdCarrousel, 
+        DataTargetCarrousel 
+    } = Astro.props;
+
+import "../../assets/css/StyleSections.css"
+import skillsData from "../../assets/skillsDataProyects.json";
+const skills = skillsData;
+---
+
+<section class="d-flex justify-content-center row mb-5">
+
+  <div class="carousel slide col-lg-4 mx-3 mb-3" id={ IdCarrousel }>
+
+    <div class="carousel-inner border border-2 border-success rounded">
+      <div class="carousel-item active">
+        <img src="/public/onePiece.jpg" class="ImgProyectsCarrousel">			
+      </div>
+      <div class="carousel-item">
+        <img src="/public/5.jpg" class="ImgProyectsCarrousel">
+      </div>
+      <div class="carousel-item">
+        <img src="/public/kamehouse.png" class="ImgProyectsCarrousel">
+      </div>
+    </div>
+
+    <button class="carousel-control-prev" type="button" data-bs-target={ DataTargetCarrousel } 
+      data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+
+    <button class="carousel-control-next" type="button" data-bs-target={ DataTargetCarrousel } 
+      data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+
+  </div>
+
+  <div class="col-lg-6 text-start">
+    <h3 class="text-success custom-shadow d-none d-md-block">
+      {TittleProyect}
+    </h3>
+
+    <p
+      class="text-white my-3 d-none d-md-block"
+      style="width: 650px; height: 215px;"
+    >
+      {DescripProyect}
+    </p>
+
+    <div class="text-start d-none d-md-block">
+      <h3 class="text-success custom-shadow mb-3">Tecnologías utilizadas</h3>
+
+      <div class="bg-transparent">
+        {
+          skills.map((item) => (
+            <a
+              class="btn btn-outline-success me-3 p-2"
+              title={item.IconTitulo}
+              href={item.IconWeb}
+              target="_blank"
+            >
+              <img class="iconImg" src={item.RutaImg} alt={item.IconTitulo} />
+            </a>
+          ))
+        }
+      </div>
+    </div>
+
+    <div class="btnVerMas bg-transparent mt-3">
+      <button
+        type="button"
+        class="btn btn-success fs-4 me-2"
+        data-bs-toggle="modal"
+        data-bs-target={BtnViewPlus}
+      >
+        Ver más
+      </button>
+
+      <a
+        class="btn btn-outline-success"
+        href={ViewCode}
+        title="Ver código"
+        target="_blank"
+      >
+        <img
+          class="iconImg"
+          src="/public/SkillsIcons/github.ico"
+          alt="Ver código"
+        />
+      </a>
+    </div>
+  </div>
+</section>

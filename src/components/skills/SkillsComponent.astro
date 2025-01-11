@@ -1,0 +1,100 @@
+---
+import "../../assets/css/SkillsComponents.css"
+import skillsTechnical from "../../assets/skillsTechnical.json";
+const skillsTech = skillsTechnical;
+---
+<section class="card-body bg-transparent px-5">
+
+  <astro-heart>
+
+    <div class="container-fluid">
+
+      <div class="d-flex justify-content-center tabs">
+        <button class="active me-3 fs-4">Habilidades Técnicas</button>
+        <button class="fs-4">Habilidades Blandas</button>
+      </div>
+  
+      <div class="tab-content bg-transparent text-success">
+  
+        <div class="IconsSkills text-center active">
+          {
+            skillsTech.map((item) => (
+              <a class="btn btn-outline-success" title={item.IconTitulo} href={item.IconWeb} target="_blank">
+                <img class="iconImg" src={item.RutaImg} alt={item.IconTitulo} />
+              </a>
+            ))
+          }
+  
+        </div>
+  
+        <div class="mt-3">
+
+          <h2>
+            <i class='bx bx-circle'></i>
+            Habilidades interpersonales
+          </h2>
+
+          <h2>
+            <i class='bx bx-circle'></i>
+            Comunicación efectiva
+          </h2>
+
+          <h2>
+            <i class='bx bx-circle'></i>
+            Atención al detalle
+          </h2>
+
+          <h2>
+            <i class='bx bx-circle'></i>
+            Trabajo en equipo
+          </h2>
+
+          <h2>
+            <i class='bx bx-circle'></i>
+            Resolución de problemas
+          </h2>
+          <h2>
+            <i class='bx bx-circle'></i>
+            Proactividad
+          </h2>
+
+          <h2>
+            <i class='bx bx-circle'></i>
+            Pensamiento crítico y analítico
+          </h2>
+
+        </div>
+  
+      </div>
+  
+    </div>
+
+  </astro-heart>
+
+</section>
+
+<!-- SCRIPT PARA ANIMACION DE LAS TABS -->
+<script>
+    class AstroHeart extends HTMLElement {
+      connectedCallback() {
+
+        let tabs = this.querySelectorAll(".tabs button");
+        let tabContents = this.querySelectorAll(".tab-content div");
+        tabs.forEach((tab, index) => {
+          tab.addEventListener("click", () => {
+            tabContents.forEach((content) => {
+              content.classList.remove("active");
+            });
+            tabs.forEach((tab) => {
+              tab.classList.remove("active");
+            });
+            tabContents[index].classList.add("active");
+            tabs[index].classList.add("active");
+          });
+        });
+
+      }
+    }
+    customElements.define('astro-heart', AstroHeart);
+</script>
+
