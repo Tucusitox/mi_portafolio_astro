@@ -3,7 +3,8 @@
 }
 
 section {
-  margin: 100px 0px;
+  padding-top: 20px;
+  padding-bottom: 90px;
   view-timeline-name: --section;
   view-timeline-axis: block;
 
