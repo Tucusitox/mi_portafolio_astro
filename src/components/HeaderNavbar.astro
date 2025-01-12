@@ -1,8 +1,7 @@
 <header class="bg-transparent px-5">
   <nav class="navbar navbar-expand-lg">
     <div class="container-fluid">
-      <a class="navbar-brand text-white fs-3"
-        ><b>José <span>Morian</span></b><a></a>
+      <a class="navbar-brand text-white fs-3"><b>José <span>Morian</span></b></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -17,14 +16,11 @@
       </a>
 
       <div class="container-fluid">
-        <div
-          class="collapse navbar-collapse justify-content-end"
-          id="navbarNavAltMarkup"
-        >
-          <div class="navbar-nav fs-5">
+        <div class="nav-container collapse navbar-collapse justify-content-end" id="navbarNavAltMarkup">
+          <div class="links navbar-nav nav-container fs-5">
+            <a class="nav-link" href="/about">Sobre mi</a>
             <a class="nav-link" href="/">Proyectos</a>
             <a class="nav-link" href="/skills">Habilidades</a>
-            <a class="nav-link" href="#">Sobre mi</a>
             <a class="nav-link" href="#">Contactame</a>
           </div>
         </div>
@@ -34,44 +30,39 @@
 </header>
 
 <style>
+  
   span {
     color: #077b32;
     text-shadow: 0 0 10px #077b32;
   }
 
-  .nav-link {
-    color: #ffff;
+  .nav-container .links {
+    display: flex;
+  }
+  .nav-container .links a {
+    color: white;
     position: relative;
+    text-decoration: none;
+    font-weight: 550;
+    transition: 0.3s linear;
   }
-  .nav-link::after {
-    content: "";
-    opacity: 0;
-    transition: all 0.2s;
-    height: 2px;
-    width: 100%;
-    background-color: #077b32;
+  .nav-container .links a::before {
     position: absolute;
-    bottom: 0;
+    content: "";
+    bottom: -3px;
     left: 0;
+    width: 0%;
+    height: 3px;
+    background-color: #077b32;
+    text-shadow: 0 0 10px #077b32;
+    transition: 0.2s linear;
   }
-  .nav-link:hover {
+  .nav-container .links a:hover::before {
+    width: 100%;
+  }
+  .nav-container .links a:hover {
     color: #077b32;
     text-shadow: 0 0 10px #077b32;
   }
-  .nav-link:hover::after {
-    opacity: 1;
-  }
-  /* .navbar{
-    animation: fade-dowm 1s;
-  }
-  @keyframes fade-dowm{
-    from{
-      opacity: 0;
-      transform: translateY(-30px) scale(0.9);
-    }
-    to{
-      opacity: 1;
-      transform: translateY(0px) scale(1);
-    }
-  } */
+
 </style>
