@@ -10,17 +10,25 @@ const skillsTech = skillsTechnical;
     <div class="container-fluid">
 
       <div class="d-flex justify-content-center tabs mb-3">
-        <button class="active me-3 fs-4">Habilidades Técnicas</button>
-        <button class="fs-4">Habilidades Blandas</button>
+        <button class="active me-3 fs-4">
+          <i class='bx bx-chip'></i>
+          Habilidades Técnicas
+        </button>
+
+        <button class="fs-4">
+          <i class='bx bx-server'></i>
+          Habilidades Blandas
+        </button>
       </div>
   
       <div class="tab-content bg-transparent text-success">
-  
+        
         <div class="IconsSkills text-center active">
           {
             skillsTech.map((item) => (
-              <a class="btn btn-outline-success" title={item.IconTitulo} href={item.IconWeb} target="_blank">
-                <img class="iconImg" src={item.RutaImg} alt={item.IconTitulo} />
+              <a class="btn btn-outline-success m-2" title={item.IconTitulo} href={item.IconWeb} target="_blank">
+                <img class="iconImg" src={item.RutaImg} alt={item.IconTitulo}/>
+                <p class="border-top border-success mt-2 d-none d-md-block">{item.IconTitulo}</p>
               </a>
             ))
           }
@@ -29,32 +37,32 @@ const skillsTech = skillsTechnical;
   
         <div class="SoftSkills mt-5">
 
-          <h2>
-            <i class='bx bx-circle'></i>
+          <h2> 
+            <i class='bx bx-conversation'></i>       
             Comunicación efectiva
           </h2>
 
           <h2>
-            <i class='bx bx-circle'></i>
+            <i class='bx bx-zoom-in'></i>          
             Atención al detalle
           </h2>
 
           <h2>
-            <i class='bx bx-circle'></i>
+            <i class='bx bx-group'></i> 
             Trabajo en equipo
           </h2>
 
           <h2>
-            <i class='bx bx-circle'></i>
+            <i class='bx bx-check-circle'></i> 
             Resolución de problemas
           </h2>
           <h2>
-            <i class='bx bx-circle'></i>
+            <i class='bx bx-bar-chart-alt'></i> 
             Proactividad
           </h2>
 
           <h2>
-            <i class='bx bx-circle'></i>
+            <i class='bx bx-brain'></i>  
             Pensamiento crítico y analítico
           </h2>
 

@@ -39,7 +39,7 @@
         "IdIcon": 7,
         "IconTitulo": "Laravel",
         "RutaImg": "/SkillsIcons/laravel.ico",
-        "IconWeb": "https://laravel.com/docs/11.x/readme"
+        "IconWeb": "https://laravel.com/docs/12.x"
     },
     {
         "IdIcon": 8,
@@ -49,14 +49,50 @@
     },
     {
         "IdIcon": 9,
+        "IconTitulo": "Angular",
+        "RutaImg": "/SkillsIcons/angular-removebg-preview.ico",
+        "IconWeb": "https://angular.dev"
+    },
+    {
+        "IdIcon": 10,
+        "IconTitulo": "TailwindCSS",
+        "RutaImg": "/SkillsIcons/tailwind.webp",
+        "IconWeb": "https://tailwindcss.com"
+    },
+    {
+        "IdIcon": 11,
+        "IconTitulo": "Expreess JS",
+        "RutaImg": "/SkillsIcons/expressjslogo.ico",
+        "IconWeb": "https://expressjs.com"
+    },
+    {
+        "IdIcon": 12,
+        "IconTitulo": "Node JS",
+        "RutaImg": "/SkillsIcons/nodejs.ico",
+        "IconWeb": "https://expressjs.com"
+    },
+    {
+        "IdIcon": 13,
+        "IconTitulo": "React",
+        "RutaImg": "/SkillsIcons/react.ico",
+        "IconWeb": "https://es.react.dev"
+    },
+    {
+        "IdIcon": 14,
         "IconTitulo": "Git",
         "RutaImg": "/SkillsIcons/git.ico",
         "IconWeb": "https://git-scm.com/doc"
     },
     {
-        "IdIcon": 10,
+        "IdIcon": 15,
         "IconTitulo": "Github",
         "RutaImg": "/SkillsIcons/github.ico",
         "IconWeb": "https://docs.github.com/es"
+    },
+    {
+        "IdIcon": 15,
+        "IconTitulo": "Mulesoft",
+        "RutaImg": "/SkillsIcons/mulesoft.ico",
+        "IconWeb": "https://www.mulesoft.com/es"
     }
 ]

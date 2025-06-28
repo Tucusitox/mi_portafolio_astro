@@ -3,7 +3,8 @@ const {
         TittleProyect, DescripProyect, 
         BtnViewPlus, ViewCode, IdCarrousel, 
         DataTargetCarrousel, ImgProyect1,
-        ImgProyect2,ImgProyect3 
+        ImgProyect2, ImgProyect3, indicesMostrar=[],
+        isVisible = false,
     } = Astro.props;
 
 import "../../assets/css/StyleSections.css"
@@ -11,9 +12,9 @@ import skillsData from "../../assets/JsonArchives/skillsDataProyects.json";
 const skills = skillsData;
 ---
 
-<section class="d-flex justify-content-center row">
-
-  <div class="carousel slide col-lg-4 mx-3 mb-3" id={ IdCarrousel }>
+<section class="d-flex justify-content-center row mb-4 py-5">
+  <!-- IMAGENES DEL CARRUSEL -->
+  <div class="carousel slide col-lg-4" id={ IdCarrousel } style="width: 500px;">
 
     <div class="carousel-inner border border-2 border-success rounded">
       <div class="carousel-item active">
@@ -38,62 +39,78 @@ const skills = skillsData;
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Next</span>
     </button>
+    <br>
+    
+    <!-- TECNOLOGIAS DEL PROYECTO -->
+    <div class="text-center ">
+      <h3 class="text-success custom-shadow"><b>Tecnologías Utilizadas</b></h3>
 
-  </div>
-
-  <div class="col-lg-6 text-start">
-    <h3 class="text-success custom-shadow d-none d-md-block">
-      <b>{ TittleProyect }</b>
-    </h3>
-
-    <p
-      class="text-white my-3 d-none d-md-block"
-      style="width: 650px; height: 215px;"
-    >
-      {DescripProyect}
-    </p>
-
-    <div class="text-start d-none d-md-block">
-      <h3 class="text-success custom-shadow mb-3"><b>Tecnologías utilizadas</b></h3>
-
-      <div class="bg-transparent">
-        {
-          skills.map((item) => (
+      <div class="bg-transparent mb-2">
+        {skills
+          .filter((item) => indicesMostrar.includes(item.IdIcon)) // Filtra por IdIcon
+          .map((item) => (
             <a
-              class="btn btn-outline-success me-3 p-2"
+              class="btn btn-outline-success m-1 p-2"
               title={item.IconTitulo}
               href={item.IconWeb}
               target="_blank"
             >
               <img class="iconImg" src={item.RutaImg} alt={item.IconTitulo} />
             </a>
-          ))
-        }
+          ))}
       </div>
     </div>
 
-    <div class="btnVerMas bg-transparent mt-3">
-      <button
-        type="button"
-        class="btn btn-success fs-4 me-2"
-        data-bs-toggle="modal"
-        data-bs-target={BtnViewPlus}
-      >
-        Ver más
-      </button>
-
-      <a
-        class="btn btn-outline-success"
-        href={ViewCode}
-        title="Ver código"
-        target="_blank"
-      >
-        <img
-          class="iconImg"
-          src="/SkillsIcons/github.ico"
-          alt="Ver código"
-        />
-      </a>
-    </div>
   </div>
+
+  <!-- DESCRIPCION DEL PROYECTO -->
+  <div class="col-lg-6 text-start">
+    <h3 class="text-success custom-shadow d-none d-md-block">
+      <b>{ TittleProyect }</b>
+    </h3>
+
+    <p class="text-white d-none d-md-block" style="width: 650px; height: 215px;">
+      {DescripProyect}
+    </p>
+    <br>
+
+    {
+      isVisible ? (
+        // VER CODIGO Y VIDEO DEL PROYECTO
+        <div class="btnVerMas bg-transparent mt-3">
+          <h3 class="text-success custom-shadow"><b>Acciones</b></h3>
+          <button
+            type="button"
+            class="btn btn-outline-success fs-4 me-1"
+            data-bs-toggle="modal"
+            data-bs-target={BtnViewPlus}
+          >
+          <i class='bx bx-plus-medical'></i>
+            Ver más
+          </button>
+          {/* PARA MOSTRAS EL CODIGO SI TENGO UN REPOSITORIO */}
+          <a
+            class="btn btn-outline-success"
+            href={ViewCode}
+            title="Ver código"
+            target="_blank"
+          >
+            <img
+              class="iconImg"
+              src="/SkillsIcons/github.ico"
+              alt="Ver código"
+            />
+          </a>
+        </div>
+        
+      ) : null
+    }
+
+
+
+  </div>
+
 </section>
+
+
+

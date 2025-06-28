@@ -3,62 +3,124 @@ import SectionsProyects from "../proyects/SectionsProyects.astro"
 import ModalsProyects from "../proyects/ModalsProyects.astro"
 ---
 
-<!-- PROYECTO N1 -->
+<!--------------------------------- PROYECTO N1 ------------------------------------------>
 <SectionsProyects
-	TittleProyect="Sistema de supervisión de empleados"
+	TittleProyect="(SGP) Sistema de Gestión de Peticiones"
 	DescripProyect=`
-		El sistema se encarga de gestionar la supervisión del restaurante, 
-		posee tres interfaces divididas en secciones las cuales son Empleados, 
-		Procesos e Infraestructura cada uno divido en diversas secciones. 
-		El sistema permite las operaciones CRUD en las tres interfaces como 
-		también generar evaluaciones de cada una de las interfaces y realizar 
-		diversos cálculos para obtener el rendimiento de cada interfaz del 
-		restaurante como por ejemplo cuanto tarda un platillo en ser cocinado 
-		o las horas trabajadas por un empelado. Este sistema fue creado para 
-		la feria de ciencias del Instituto Universitario Jesús Obrero, Caracas, 
-		Venezuela. Dicho sistema aún tiene un amplio margen de mejora.
+		El sistema administra y gestiona las solicitudes o incidencias recibidas por correo electrónico. Para ello, se conecta a
+		un servidor de correo o uan cuenta con clave de aplicación mediante el protocolo IMAP y realiza un análisis automatizado 
+		de los mensajes enviados durante el día. Cada correo válido genera un ticket, que se asigna automáticamente a un analista 
+		disponible en el sistema. Este usuario recibe una notificación para dar seguimiento o resolver la incidencia, informando 
+		al cliente por correo cuando su solicitud ha sido atendida. La aplicación incorpora control de acceso con roles y permisos,
+		protección de rutas, respaldo de la base de datos, operaciones CRUD esenciales y notificaciones por correo
+		electrónico a través del protocolo SMTP.
 		`;
-	BtnViewPlus="#section-1"
-	ViewCode="https://github.com/Tucusitox/Laravel_Supervision.git"
+	BtnViewPlus="#proyecto-1"
+	ViewCode="https://github.com/Tucusitox/laravel_tickets.git"
 	IdCarrousel="1"
 	DataTargetCarrousel="#1"
-	ImgProyect1="/onePiece.jpg"
-	ImgProyect2="/5.jpg"
-	ImgProyect3="/kamehouse.png"
+	ImgProyect1="/proyectsImg/ticketsLogin.png"
+	ImgProyect2="/proyectsImg/ticketsDashboard.png"
+	ImgProyect3="/proyectsImg/ticketsDetalles.png" 
+	indicesMostrar={[3,4,5,6,7]} 
+	isVisible="true"
 />
-
 <!-- MODAL PARA PROYECTO N1 -->
 <ModalsProyects 
-	TittleProyect="Sistema de supervisión de empleados"
-	ViewProyectMp4="/proyectsMp4/daniela.mp4"
+	TittleProyect="(SGP) Sistema de Gestión de Peticiones"
+	ViewProyectMp4="/proyectsMp4/SistemaGestionPeticiones.mp4"
+	IdModal="proyecto-1"
 />
 
+<!--------------------------------- PROYECTO N2 ------------------------------------------>
 <SectionsProyects
-	TittleProyect="Módulo "
+	TittleProyect="(SGATI) Sistema de Gestión de Activos TI"
 	DescripProyect=`
-		El sistema se encarga de gestionar la supervisión del restaurante, .
+		Está diseñado para gestionar de manera 
+		eficiente los equipos tecnológicos de una empresa, 
+		incluyendo computadoras, mouse, monitores, teclados 
+		y otros dispositivos periféricos. Centraliza toda la 
+		información en un único sistema, facilitando el control 
+		de los activos. Además, permite asignar equipos a empleados de manera dinámica 
+		y generar reportes en excel o pdf para un mejor análisis de los activos.
+		Cuenta con roles de usuario y protección de rutas, el software garantiza que solo el 
+		personal autorizado pueda acceder a funciones críticas, manteniendo la integridad y 
+		confidencialidad de los datos.
 		`;
-	BtnViewPlus="#section-2"
-	ViewCode="https://github.com/Tucusitox/Laravel_Supervision.git"
+	BtnViewPlus="#proyecto-2"
+	ViewCode="https://github.com/Tucusitox/sis_gati.git" 
 	IdCarrousel="2"
 	DataTargetCarrousel="#2"
-	ImgProyect1="/onePiece.jpg"
-	ImgProyect2="/5.jpg"
-	ImgProyect3="/kamehouse.png"
+	ImgProyect1="/proyectsImg/sgatiLogin.png"
+	ImgProyect2="/proyectsImg/sgatiDashboard.png"
+	ImgProyect3="/proyectsImg/sgatiActivos.png"
+	indicesMostrar={[6,7,9,10]} 
+	isVisible="true"
+/>
+<!-- MODAL PARA PROYECTO N2 -->
+<ModalsProyects 
+	TittleProyect="(SGATI) Sistema de Gestión de Activos TI"
+	ViewProyectMp4="/proyectsMp4/SGATI.mp4"
+	IdModal="proyecto-2"
 />
 
+<!--------------------------------- PROYECTO N3 ------------------------------------------>
 <SectionsProyects
-	TittleProyect="Módulo "
+	TittleProyect="(CMS) Sistema de Gestión de Contenidos"
 	DescripProyect=`
-		El sistema se encarga de gestionar la supervisión del restaurante, .
+		Este CMS ofrece gestión web intuitiva para empresas, con módulos clave 
+		(inicio, noticias y contacto) accesibles desde un panel administrativo. 
+		Implementa tres roles de usuario: administrador (acceso total), publicador (borrado lógico) 
+		y visitante (solo lectura). El borrado físico requiere contraseña de administrador. Incluye 
+		protección de rutas, autenticación por tokens via correo electrónico y recuperación de contraseñas. 
+		Garantiza seguridad con respaldos automáticos de base datos y validación de cuentas. Ideal 
+		para usuarios sin conocimientos técnicos que necesitan control completo sobre su sitio web.
 		`;
-	BtnViewPlus="#section-2"
-	ViewCode="https://github.com/Tucusitox/Laravel_Supervision.git"
+	BtnViewPlus="#proyecto-3"
+	ViewCode="https://github.com/Tucusitox/app_cms.git"
 	IdCarrousel="3"
 	DataTargetCarrousel="#3"
-	ImgProyect1="/onePiece.jpg"
-	ImgProyect2="/5.jpg"
-	ImgProyect3="/kamehouse.png"
+	ImgProyect1="/proyectsImg/cmsPagPrincipal.png"
+	ImgProyect2="/proyectsImg/cmsPagPerfil.png"
+	ImgProyect3="/proyectsImg/cmsEditPublicacion.png"
+	indicesMostrar={[4,5,6,7,8]} 
+	isVisible="true"
+/>
+<!-- MODAL PARA PROYECTO N3 -->
+<ModalsProyects 
+	TittleProyect="(CMS) Sistema de Gestión de Contenidos"
+	ViewProyectMp4="/proyectsMp4/cmsPrototipo.mp4"
+	IdModal="proyecto-3"
+/>
+
+<!--------------------------------- PROYECTO N4 ------------------------------------------>
+<SectionsProyects
+	TittleProyect="(SDI) Sistema de Inventarios"
+	DescripProyect=`
+		Se encarga de la gestión centralizada de todos los productos de un negocio, 
+		sin importar su variedad temática, categorías o rubro comercial, ofreciendo 
+		un control unificado tanto del inventario como de los proveedores asociados 
+		y los usuarios del sistema. Permite administrar de manera eficiente múltiples 
+		aspectos desde la organización jerárquica de productos por categorías, 
+		hasta el registro detallado de proveedores, pasando por la gestión de usuarios.
+		La plataforma incluye robustas medidas de seguridad, como protección de rutas 
+		mediante autenticación y autorización, garantizando así el resguardo de la información sensible.
+		`;
+	BtnViewPlus="#proyecto-4"
+	ViewCode="https://github.com/Tucusitox/SisInventario_ReactExpressJS.git"
+	IdCarrousel="4"
+	DataTargetCarrousel="#4"
+	ImgProyect1="/proyectsImg/sisInventarioLogin.png"
+	ImgProyect2="/proyectsImg/sisInventarioDashboard.png"
+	ImgProyect3="/proyectsImg/sisInventarioProductos.png"
+	indicesMostrar={[4,11,12,13]} 
+	isVisible="true"
+/>
+<!-- MODAL PARA PROYECTO N4 -->
+<ModalsProyects 
+	TittleProyect="(SDI) Sistema de Inventarios"
+	ViewProyectMp4="/proyectsMp4/SistemaGestionInventario.mp4"
+	IdModal="proyecto-4"
 />
 
 

@@ -1,14 +1,14 @@
 ---
-const { TittleProyect, ViewProyectMp4 } = Astro.props;
+const { TittleProyect, ViewProyectMp4, IdModal } = Astro.props;
 ---
-<div class="modal fade" id="section-1">
+<div class="modal fade" id={IdModal}>
     <div class="modal-dialog modal-dialog-centered modal-fullscreen p-2">
         <div class="modal-content bg-transparent" style="backdrop-filter: blur(3rem);">
 
             <div class="modal-header d-flex justify-content-between border border-0">
                 <h1 class="modal-title text-success custom-shadow fs-4"><b>{ TittleProyect }</b></h1>
-                <b>
-                    <i class='bx bx-x text-danger fs-2'  
+                <b>                    
+                    <i class='bx bx-x-circle text-danger fs-2'  
                     data-bs-dismiss="modal"
                     title="Ver menos"></i>
                 </b>

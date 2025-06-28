@@ -1,0 +1,39 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SectionsProyects from "../components/proyects/SectionsProyects.astro"
+import ModalsProyects from "../components/proyects/ModalsProyects.astro"
+---
+
+<Layout titulo="Experiencia">
+    <!--------------------------------- PROYECTO DE PASANTIAS ------------------------------------------>
+    <SectionsProyects
+        TittleProyect="(GATI) Gestión de Activos TI de NetUno"
+        DescripProyect=`
+            Durante mi pasantía profesional en NetUno desde marzo hasta mayo del 2025, 
+            lideré la optimización del aplicativo GATI, enfocándome en tres áreas claves como el 
+            desarrollo de nuevos módulos (incluyendo un completo Historial de Equipos), implementación 
+            de funcionalidades críticas (como endpoints para edición de equipos y optimización de 
+            consultas SQL para mejorar el rendimiento), y solución de problemas técnicos 
+            (destacando la corrección de un memory leak durante la exportación de reportes a Excel/PDF 
+            que mejoró significativamente la estabilidad del sistema). Mi contribución permitió incrementar 
+            la eficiencia operativa del software mientras adquiría experiencia práctica en desarrollo de 
+            aplicaciones empresariales y resolución de problemas complejos.
+            `;
+        BtnViewPlus="#proyecto-pasantias"
+        IdCarrousel="5"
+        DataTargetCarrousel="#5"
+        ImgProyect1="/proyectsImg/gatiDashboard.png"
+        ImgProyect2="/proyectsImg/gatiEditEquipo.png"
+        ImgProyect3="/proyectsImg/sgatiHistorialEquipo.png" 
+        indicesMostrar={[4,6,9,14]} 
+    />
+    <!-- MODAL PARA PROYECTO DE PASANTIAS -->
+    <ModalsProyects 
+        TittleProyect="(GATI) Gestión de Activos TI"
+        ViewProyectMp4="/proyectsMp4/GATI.mp4"
+        IdModal="proyecto-pasantias"
+    />
+
+</Layout>
+
+
