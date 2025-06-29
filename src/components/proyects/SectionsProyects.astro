@@ -13,6 +13,51 @@ const skills = skillsData;
 ---
 
 <section class="d-flex justify-content-center row mb-4 py-5">
+  <!-- DESCRIPCION DEL PROYECTO -->
+  <div class="col-lg-6 text-start">
+    <h3 class="tituloProyecto text-success custom-shadow">
+      <b>{ TittleProyect }</b>
+    </h3>
+
+    <p class="descripProyecto text-white d-none d-md-block">
+      {DescripProyect}
+    </p>
+    <br>
+
+    {
+      isVisible ? (
+        // VER CODIGO Y VIDEO DEL PROYECTO
+        <div class="btnVerMas bg-transparent my-3">
+          <h3 class="text-success custom-shadow d-none d-md-block"><b>Acciones</b></h3>
+          {/* <button
+            type="button"
+            class="btn btn-outline-success fs-4 me-1"
+            data-bs-toggle="modal"
+            data-bs-target={BtnViewPlus}
+          >
+          <i class='bx bx-plus-medical'></i>
+            Ver más
+          </button> */}
+          {/* PARA MOSTRAS EL CODIGO SI TENGO UN REPOSITORIO */}
+          <a
+            class="btn btn-outline-success" 
+            href={ViewCode}
+            title="Ver código"
+            target="_blank"
+          >
+            <img
+              class="iconImg"
+              src="/SkillsIcons/github.ico"
+              alt="Ver código"
+            />     
+            <b>Ver Código</b>     
+          </a>
+        </div>
+        
+      ) : null
+    }
+  </div>
+
   <!-- IMAGENES DEL CARRUSEL -->
   <div class="carousel slide col-lg-4" id={ IdCarrousel } style="width: 500px;">
 
@@ -63,53 +108,7 @@ const skills = skillsData;
 
   </div>
 
-  <!-- DESCRIPCION DEL PROYECTO -->
-  <div class="col-lg-6 text-start">
-    <h3 class="text-success custom-shadow d-none d-md-block">
-      <b>{ TittleProyect }</b>
-    </h3>
 
-    <p class="text-white d-none d-md-block" style="width: 650px; height: 215px;">
-      {DescripProyect}
-    </p>
-    <br>
-
-    {
-      isVisible ? (
-        // VER CODIGO Y VIDEO DEL PROYECTO
-        <div class="btnVerMas bg-transparent mt-3">
-          <h3 class="text-success custom-shadow"><b>Acciones</b></h3>
-          {/* <button
-            type="button"
-            class="btn btn-outline-success fs-4 me-1"
-            data-bs-toggle="modal"
-            data-bs-target={BtnViewPlus}
-          >
-          <i class='bx bx-plus-medical'></i>
-            Ver más
-          </button> */}
-          {/* PARA MOSTRAS EL CODIGO SI TENGO UN REPOSITORIO */}
-          <a
-            class="btn btn-outline-success" 
-            href={ViewCode}
-            title="Ver código"
-            target="_blank"
-          >
-            <img
-              class="iconImg"
-              src="/SkillsIcons/github.ico"
-              alt="Ver código"
-            />     
-            <b>Ver Código</b>     
-          </a>
-        </div>
-        
-      ) : null
-    }
-
-
-
-  </div>
 
 </section>
 

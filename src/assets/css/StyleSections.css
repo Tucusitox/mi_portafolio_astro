@@ -14,6 +14,14 @@ section {
 
   animation-duration: 2s;
 }
+.tituloProyecto {
+  text-align: left;
+}
+
+.descripProyecto {
+  width: 600px; 
+  height: 215px;
+}
 
 .ImgProyectsCarrousel {
   display: block;
@@ -45,5 +53,13 @@ section {
   .btnVerMas {
     text-align: center !important;
     margin-top: -30px !important;
+  }
+  .descripProyecto {
+    width: 100% !important;
+    height: auto !important;
+    text-align: center !important;
+  }
+  .tituloProyecto {
+    text-align: center !important;
   }
 }
